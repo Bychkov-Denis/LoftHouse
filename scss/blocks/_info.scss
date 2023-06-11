@@ -1,0 +1,27 @@
+.info {
+  font-size: 18px;
+  padding-left: 35px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 21px;
+    height: 21px;
+    transform: translate(0, -50%);
+    background-image: url("./../img/header/map.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--tel::before {
+    background-image: url("./../img/header/phone.svg");
+  }
+
+  @include mediaTablet {
+    font-size: 14px;
+    padding-left: 26px;
+  }
+}
